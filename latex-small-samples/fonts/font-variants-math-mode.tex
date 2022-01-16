@@ -1,0 +1,103 @@
+\documentclass{article}
+
+\usepackage{../chc-exa-style}
+
+\begin{document}
+
+\begin{example}
+$a=b$
+\end{example}
+
+\begin{example}
+$\mathrm{a} = b$
+\end{example}
+
+\begin{example}
+$\mathbf{a} = b$
+\end{example}
+
+\begin{example}
+$\mathsf{a} = b$
+\end{example}
+
+\begin{example}
+$\mathtt{a} = b$
+\end{example}
+
+\begin{example}
+$\mathit{a} = b$
+\end{example}
+
+\begin{example}
+$\mathnormal{a} = b$
+\end{example}
+
+\begin{example}
+$\mathcal{a} = b$
+\end{example}
+
+\begin{example}
+$\mathcal{A} = b$
+\end{example}
+
+
+\note{Textbefehle wirken kumulativ}
+
+\begin{example}
+\textbf{\textit{b}}
+\end{example}
+
+
+\note{Mathebefehle wirken nicht kumulativ:}
+
+\begin{example}
+$\mathbf{\mathit{a}} = b$
+\end{example}
+
+\note{Mathebefehle wirken nur auf das nächste Token:}
+
+\begin{example}
+$\mathbf a = b$
+\end{example}
+
+\note{Erforderlichenfalls mehrere Token durch Grupperierung zu einem Token zusammenfassen:}
+
+\begin{example}
+$\mathbf{a = b} =c$
+\end{example}
+
+\note{Komplettumstellung auf bold:}
+
+\begin{example}
+\mathversion{bold}$a = b$
+\end{example}
+
+
+\note{Komplettrückstellung auf normal:}
+
+\begin{example}
+\mathversion{bold}$a$\mathversion{normal}$a$
+\end{example}
+
+\note{Komplettrückstellung wirkt nur vor dem Mathemodus:}
+
+\begin{example}
+$\mathversion{bold}a$
+\end{example}
+
+Kalligraphische Fonts:
+
+\begin{example}
+$\mathcal{A} =\cal B$
+\end{example}
+
+Kalligraphische nur für Großbuchstaben
+\begin{example}
+$\mathcal{A} =\cal b$
+\end{example}
+
+
+
+
+
+\end{document}
