@@ -1,0 +1,83 @@
+\documentclass{article}
+
+\usepackage{chc-standard}
+
+%\parskip 0cm
+%\parindent 0.2cm
+
+\usepackage{fancyvrb}
+
+% see   https://tex.stackexchange.com/questions/145343/encoding-of-written-out-files
+\newenvironment{writefile}[1]
+ {\deactivateeightbit\VerbatimOut{#1}}
+ {\endVerbatimOut}
+\makeatletter
+\newcommand{\deactivateeightbit}{%
+  \count@=127
+  \loop
+    \catcode\count@=12
+    \ifnum\count@<255
+    \advance\count@\@ne
+  \repeat
+}
+\makeatother
+
+\begin{document}
+
+
+\section{Inline Beispiel}
+
+
+\begin{writefile}{x1.tex}
+Dasqweqwe
+
+\begin{tabular}[]{ll}
+qwe & ä \\
+asd & qwe
+\end{tabular}
+
+zu
+
+weniger
+\end{writefile}
+
+
+\inputminted[]{tex}{build/x1.tex}
+
+
+ZWEITES ORIGINAL
+
+\hspace*{1cm}
+
+\hrule
+\input{build/x1.tex}
+
+\vspace*{0.3cm}\hrule
+
+
+\section{Volles Beispiel}
+
+
+
+\begin{writefile}{voll.tex}
+\documentclass[a4paper]{article}
+\author{Foo Bar}
+\title{A \LaTeX Test}
+\begin{document}
+
+Merely a test.
+
+\end{document}
+\end{writefile}
+
+\inputminted[]{tex}{build/voll.tex}
+
+\fbox{
+\includegraphics[scale=0.5]{build/voll.pdf}
+}
+
+\end{document}
+
+
+
+
