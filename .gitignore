@@ -12,3 +12,7 @@ build/
 *.synctex.gz
 *.synctex.gz(busy)
 *.pdfsync
+
+## ignore artifacts of the minted tool
+_minted*/
+

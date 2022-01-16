@@ -25,8 +25,8 @@ Questions, suggestions and remarks are welcome in the issues section.
 
 |  Directory | Contents |
 |---|---|
-| latex-page-examples  | Examples  |  
-| latex-small-examples |   |   
+| latex-page-examples  | Examples consisting of one page |  
+| latex-small-examples | Examples consisting of a few lines  |   
 |   |   | 
 
 
