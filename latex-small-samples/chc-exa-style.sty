@@ -1,0 +1,30 @@
+
+\usepackage[margin=1in]{geometry}
+
+\pagestyle{empty}
+
+\parindent 0cm
+\parskip 0.15cm
+\usepackage{environ}
+\usepackage[outputdir=build,newfloat=true]{minted} 
+
+\makeatletter
+\newenvironment{example}{%
+  \VerbatimEnvironment
+ % \begin{tabular}[]{p{5cm}c}
+    \begin{minipage}{8cm}%    
+      \begin{VerbatimOut}{\jobname.pyg}}
+{%
+      \end{VerbatimOut}
+      \minted@pygmentize{tex}
+    \end{minipage}
+ %   &
+  \begin{minipage}{5cm}
+    \input{\jobname.pyg}
+  \end{minipage}  
+ % \end{tabular}
+}
+
+\def\note#1{\vspace*{0.3cm}\textbf{Hinweis:} #1}
+
+\makeatother
