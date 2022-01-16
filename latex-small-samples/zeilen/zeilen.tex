@@ -1,0 +1,130 @@
+% & preamble-slides
+% The above is the latex equivalent of the shebang and loads the precompiled format preamble-slides
+
+%% Set the proper search path for inputs, including possible image folders
+%\makeatletter
+%\def\input@path{{/Users/cap/TEX/}{images/}}  %% must have double braces and a trailing slash
+%\makeatother
+
+\input{preamble-slides}               % This part could also be precompiled
+\input{slide-defaults-clemens}
+\input{my-macros}                     % Macros for all kinds of Latex cases, independent from document class    TODO:    can we do this in tilde directory ???  and on demand
+\input{dynamic-slides}                % Those preamble portions which cannot be precompiled
+
+\bibsource{../web20.bib}
+\glosource{../GLOSSARY}          % Load glossary file, if not found suppress glossary
+
+\selectlanguage{german}               % select language:   english or german
+% !TeX spellcheck = de_DE_OLDSPELL
+
+\title{Asynchrone Programmierung}
+\subtitle{}
+
+\subject{Web 20}
+\keywords{Web 20}
+
+\version{Version 1}
+\iukid{1066-1007}                      % shows up after https://iuk.one/ on title page, in links, in Zitierweise   ENSURE UPLOAD ?????????
+\doi{}                                 % if present: in title page, pdf properties and Zitierweise and as doi link.  
+                                       % Provide as in: \doi{0.1365/s40702-018-00470-w}
+\howpublished{Electronic document}
+
+% may override date
+%\year=2020            % shows up in title page and Zitierweise
+%\month=10             % shows up in titlepage  and Zitierweise
+%\day=12               % shows up in titlepage
+
+\venue{}    % venue is used on title slide as last thing
+
+%\youtubeUrl{qwqdqe} 
+%\youtubeChannelName{mychannelname}
+%\youtubeChannelUrl{channelurl}
+\githubUrl{http://github.com/clecap/vl-web}
+%\tweedbackUrl{http://tweedback.de/sess}
+
+
+% chose options for section page and for subsection page among the available templates:
+%   no slide  /  one column large  /  one column small  /  two columns both  /  two columns small  /  two columns large
+
+%\setbeamertemplate{subsection page}[no slide]
+\setbeamertemplate{section page}[two columns both]
+%\setbeamertemplate{section page}[no slide]
+\setbeamertemplate{subsection page}[no slide]
+
+\tikzdeg  % invole degrees for proper drawing 
+
+
+%\setMode{draft}
+%\setMode{grid}
+%\setMode{video}
+%\setMode{speaker}
+\setMode{audio}
+
+%\backJob{speaker}
+%\backJob{audio}
+%\backJob{video}
+%\foreJob{speaker}
+
+\attachJson{"hasAudio":true}
+
+%%%%%%%%% \attachfile{\myiukidstring.json} % attach this before \initialize in order not to have the file cleared which we obtained from last run
+
+%% try some adding stuff for scalability
+
+
+\initialize                      % initialize some stuff assembled 
+\begin{document}
+
+\solutionsInternal
+
+\titleframe
+
+%\begin{tocframe}{Übersicht}
+%
+%\tableofcontents
+%\tableofcontents[hidesubsections]
+%\framebreak
+%\tableofcontents[hidesubsections,sections=<4-6>]
+%\framebreak
+%\tableofcontents[hidesubsections,sections=<7-8>]
+%\framebreak
+%\tableofcontents[hidesubsections,sections=<9->]
+%\end{tocframe}
+
+
+\section{Einleitung}
+
+
+\begin{frame}{Kerning}
+
+
+WAV
+
+W\"AV
+
+\end{frame}
+
+
+
+
+
+
+
+
+
+ \appendixSeparationPage%     this MUST be present in every appendix as it turns on some appendix settings
+  \listOfAppendicesFrame
+  \listOfReferencesFrame
+  \listOfSourcesFrame
+  \listOfFiguresFrame
+  \listOfTablesFrame
+  \listOfRightsFrame
+  \ownRightsRemark
+  \citingThisDocument
+  \tableOfSymbols
+  \indexFrame
+  \tableOfFrames
+  
+ % \listofall
+  
+\end{document}
