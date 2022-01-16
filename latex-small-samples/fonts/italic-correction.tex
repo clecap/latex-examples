@@ -1,0 +1,134 @@
+\documentclass{article}
+
+\usepackage{../chc-exa-style}
+
+\begin{document}
+
+\note{Italic correction vermeidet die Kollision zwischen Zeichen,
+typischerweise bei italic Schriften.}
+
+\begin{example}
+{\em f}B
+\end{example}
+
+\begin{example}
+{\em f}\/B
+\end{example}
+
+
+
+\note{Slanted steht auch schief und dort ist italic correction 
+ebenso ein Thema.}
+
+\begin{example}
+{\sl f}B
+\end{example}
+
+\begin{example}
+{\sl f}\/B
+\end{example}
+
+
+
+\note{\texttt{\textbackslash textit}, \texttt{\textbackslash emph} 
+und \texttt{\textbackslash testsl} haben die italic correction eingebaut.}
+
+\begin{example}
+\textit{f}B
+\end{example}
+
+\begin{example}
+\textit{f}\/B
+\end{example}
+
+\begin{example}
+\emph{f}B
+\end{example}
+
+\begin{example}
+\emph{f}\/B
+\end{example}
+
+\begin{example}
+\textsl{f}B
+\end{example}
+
+\begin{example}
+\textsl{f}\/B
+\end{example}
+
+
+\note{Unterdrücken der Italic Correction:}
+
+\begin{example}
+\textit{\nocorr f}B
+\end{example}
+
+\begin{example}
+\textit{f \nocorr}B
+\end{example}
+
+
+\note{\texttt{\textbackslash em}, 
+\texttt{\textbackslash it},
+\texttt{\textbackslash sl},
+\texttt{\textbackslash itshape} 
+und \texttt{\textbackslash slshape} benötigen italic correction.}
+
+\begin{example}
+{\em f}B
+\end{example}
+
+\begin{example}
+{\em f}\/B
+\end{example}
+
+\begin{example}
+{\it f}B
+\end{example}
+
+\begin{example}
+{\it f}\/B
+\end{example}
+
+\begin{example}
+{\sl f}B
+\end{example}
+
+\begin{example}
+{\sl f}\/B
+\end{example}
+
+\begin{example}
+{\itshape f}B
+\end{example}
+
+\begin{example}
+{\itshape f}\/B
+\end{example}
+
+\begin{example}
+{\slshape f}B
+\end{example}
+
+\begin{example}
+{\slshape f}\/B
+\end{example}
+
+\note{Italic correction spielt auch bei non-italic
+Schriften eine Rolle in der Kollisionsvermeidung:}
+
+\begin{example}
+pdf\TeX
+\end{example}
+
+\begin{example}
+pdf\/\TeX
+\end{example}
+
+
+
+
+
+
+\end{document}
