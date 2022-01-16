@@ -1,0 +1,21 @@
+\documentclass[a5paper]{article}
+\usepackage[pass]{geometry}
+
+\usepackage{tgbonum} % Definition einer neuen Font
+
+\parindent 0pt 
+\parskip   0.25cm
+\begin{document}
+
+Das ist die Standard Font; in vielen Formaten ist das die
+latin modern roman oder die computer modern roman font,
+hier wurde durch ein eingebundenes Paket eine weitere Font
+definiert.
+
+{\fontfamily{qbk}\selectfont Die qbk Font ist die tgbonum font.}
+
+{\fontfamily{qcr}\selectfont Dieser Text nutzt eine andere Font.}
+
+{\fontfamily{lmr}\selectfont Dieser Text nutzt wieder die latin modern roman font.}
+
+\end{document}

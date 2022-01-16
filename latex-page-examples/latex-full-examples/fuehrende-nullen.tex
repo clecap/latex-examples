@@ -1,0 +1,26 @@
+\documentclass[a5paper]{article}
+\usepackage[pass]{geometry}
+
+\usepackage{fmtcount}%   Ein hilfreiches Paket für die Formatierung von Zahlen
+
+\begin{document}
+
+\newcounter{mycounter}%  Definiere neuen Zähler
+
+\newcommand{\printcntr}{%                     Definiere neuen Befehl
+  \stepcounter{mycounter}%                    Erhöhe Zähler
+  \padzeroes[2]{\decimal{mycounter}}     &
+  \padzeroes[4]{\binary{mycounter}}      &
+  \padzeroes[3]{\octal{mycounter}}       &
+  \padzeroes[3]{\HEXADecimal{mycounter}} %
+}
+
+\begin{tabular}{@{}cccc}
+  \textbf{Dezimal} & \textbf{Binär} & \textbf{Oktal} & \textbf{Hexa} \\ \hline
+  \printcntr \\ \printcntr \\ \printcntr \\ \printcntr \\ \printcntr \\
+  \printcntr \\ \printcntr \\ \printcntr \\ \printcntr \\ \printcntr \\
+  \printcntr \\ \printcntr \\ \printcntr \\ \printcntr \\ \printcntr \\
+  \printcntr \\ \printcntr \\ \printcntr \\ \printcntr \\ \printcntr 
+\end{tabular}  
+\end{document}
+

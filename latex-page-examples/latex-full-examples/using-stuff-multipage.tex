@@ -1,0 +1,74 @@
+\documentclass[17pt]{article}
+\parindent 0cm  \parskip 0.25cm
+
+\pagestyle{empty}
+
+\usepackage{tabularx}
+\usepackage[paperheight=9cm, paperwidth=16cm, top=0.2cm, left=0cm, right=0cm, bottom=0.2cm]{geometry}
+
+\usepackage[outputdir=build]{minted} 
+\usepackage{graphicx}
+
+\def\import#1{%
+\begin{tabular}[]{ll}
+\textbf{Beispiel:} #1 \\
+\scalebox{0.7}{
+\begin{minipage}{12.5cm}
+\inputminted[]{tex}{#1.tex}
+\end{minipage}}
+&
+\begin{minipage}{3cm}
+\fbox{
+\includegraphics[scale=0.37]{build/#1.pdf}
+}
+\end{minipage}%
+\end{tabular}%
+}
+
+
+\def\twopage#1{%
+\begin{tabular}[]{p{4.8cm} p{4.8cm} p{4.8cm}}
+\scalebox{0.35}{
+\begin{minipage}[c]{14cm}
+\inputminted[]{tex}{#1.tex}
+\end{minipage}
+} &
+\begin{minipage}[c]{4.6cm}\fbox{\includegraphics[scale=0.33,page=1]{build/#1.pdf}}\end{minipage} &
+\begin{minipage}[c]{4.6cm}\fbox{\includegraphics[scale=0.33,page=2]{build/#1.pdf}}\end{minipage}
+\end{tabular}
+\pagebreak
+}
+
+
+\def\threepage#1{%
+%\hspace*{0.15cm}
+\vspace*{-0.2cm}
+{\tabcolsep 0.1cm
+\begin{tabular}[]{ccc}
+\fbox{\includegraphics[scale=0.33,page=1]{build/#1.pdf}} &
+\fbox{\includegraphics[scale=0.33,page=2]{build/#1.pdf}} &
+\fbox{\includegraphics[scale=0.33,page=3]{build/#1.pdf}}
+\end{tabular}\pagebreak
+}}
+
+
+
+\begin{document}
+
+
+
+
+\scriptsize
+
+%\import{paragraphs-breaking}
+
+\import{font-wechsel-2}
+
+
+\twopage{paragraphs-breaking}
+
+\threepage{paragraphs-breaking}
+
+
+
+\end{document}

@@ -1,0 +1,40 @@
+\documentclass[a5paper]{article}
+\usepackage[pass]{geometry}
+
+\parindent 0pt
+
+\begin{document}
+
+% Schalte um auf wörtliche Ausgabe statt Interpretation der Befehle
+% Warum steht das Kommentar nicht nach dem verbatim Befehl?
+\begin{verbatim}    
+\newcounter{foo}
+\setcounter{foo}{5}    
+\end{verbatim}
+% Beende wörtliche Ausgabe
+% Abschaltbefehl muß allein auf einer Zeile stehen
+
+\newcounter{foo}        % Definieren neuen Zähler
+\setcounter{foo}{5}     % Initialisiere neuen Zähler
+
+\begin{itemize}
+\item \verb|\arabic{foo}| ergibt arabische Zahl \arabic{foo}
+\item \verb|\roman{foo}| ergibt kleine römische Zahl \roman{foo} 
+\item \verb|\Roman{foo}| ergibt große römische Zahl \Roman{foo}
+\item \verb|\Alph{foo}| ergibt große alphabetische Position \Alph{foo}
+\item \verb|\alph{foo}| ergibt kleine alphabetische Position \alph{foo}
+\end{itemize}
+
+\setcounter{foo}{7991}  % Kann TeX das auch
+Große Zahl: \Roman{foo}             % Ja :-)
+
+\setcounter{foo}{4}
+
+% Jetzt noch etwas spezielleres
+\def\leadingZero#1{\ifnum\value{foo}<10 0\fi\arabic{foo}}
+
+Führende Null automatisch:
+\setcounter{foo}{14}\leadingZero{foo} und 
+\setcounter{foo}{4}\leadingZero{foo}
+
+\end{document}

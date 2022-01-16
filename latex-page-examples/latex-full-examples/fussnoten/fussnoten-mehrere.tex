@@ -1,0 +1,37 @@
+\documentclass[a5paper]{article}
+\usepackage[pass]{geometry}
+
+\usepackage[german]{babel}
+\usepackage{blindtext}
+
+\usepackage[multiple]{footmisc} % Fügt Kommata zwischen Fußnoten auf richtiger Höhe ein.
+
+\begin{document}
+
+
+Bei mehreren Fußnoten\footnote{Eins}\footnote{Zwei}\footnote{Drei}
+sehen Kommata auf der Höhe der Fußnotenzeichen elegant aus.
+Dazu bindet man das Paket \texttt{footmisc} mit der Option
+\texttt{multiple} ein.
+
+Das funktioniert aber nur, wenn \footnote{Vier} \footnote{Fünf} \footnote{Sechs}
+zwischen den Fußnoten keine Leerzeichen stehen.
+
+Zeilenenden zählen wie Leerzeichen\footnote{Sieben} 
+\footnote{Acht}
+\footnote{Neun}
+zwischen den Fußnoten.
+
+
+Zeilenenden zählen wie Leerzeichen\footnote{Sieben}% 
+\footnote{Acht}%
+\footnote{Neun}
+zwischen den Fußnoten.
+
+Vermutlich sieht es \footnote{zehn}%
+\footnote{Elf}%
+\footnote{Zwölf}
+am Besten aus, wenn man bei mehreren Fußnoten einen
+Abstand vor dem ersten Fußnotenzeichen beläßt.
+
+\end{document}

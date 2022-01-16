@@ -1,0 +1,36 @@
+\documentclass[17pt]{article}
+\parindent 0cm  \parskip 0.25cm
+
+\pagestyle{empty}
+
+\usepackage[paperheight=9cm, paperwidth=16cm, top=0.2cm, left=0cm, right=0cm, bottom=0.2cm]{geometry}
+
+\usepackage[outputdir=build]{minted} 
+\usepackage{graphicx}
+
+\def\import#1{%
+\begin{tabular}[]{ll}
+\textbf{Beispiel:} #1 \\
+\scalebox{0.7}{
+\begin{minipage}{12.5cm}
+\inputminted[]{tex}{#1.tex}
+\end{minipage}}
+&
+\begin{minipage}{3cm}
+\fbox{
+\includegraphics[scale=0.37]{build/#1.pdf}
+}
+\end{minipage}%
+\end{tabular}%
+}
+\begin{document}
+
+\scriptsize
+
+\import{font-wechsel-2}
+
+\import{font-wechsel-2}
+
+\import{zaehler}
+
+\end{document}

@@ -1,0 +1,32 @@
+\documentclass[a5paper]{article}
+\usepackage[pass]{geometry}
+
+\usepackage[german]{babel}
+\usepackage{blindtext}
+
+\begin{document}
+
+\newcounter{merker}  % Neuen Zähler anlegen zum speichern eines Fußnotenwertes.
+
+\newcounter{beispiel}
+
+Will man eine Fußnote\footnote{Diese hier!}\setcounter{merker}{\value{footnote}}
+mehrfach verwenden\footnote{Insbesondere wenn dazwischen andere Fußnoten stehen},
+dann ist es hilfreich, die Werte der Fußnote nicht als absolute Zahlen zu verwenden,
+sondern sich die Fußnote in einer Variablen zwischenzuspeichern.
+
+Man kann dann viel später\footnotemark[\value{merker}] auf den Wert\footnote{Den
+der Zähler früher hatte} zurück%
+\setcounter{beispiel}{\value{footnote}}%
+greifen. Fügt man im Text später weitere Fußnoten\footnote{Noch eine!} ein,
+dann verändert sich\footnotemark[\value{beispiel}] die absolute Zahl,
+der Variablenname aber nicht. Es empfehlen sich sprechende Variablennamen.
+
+Das Beispiel zeigt auch, wie die Befehle zum Speichern der Werte mitten im Text,
+sogar mitten in einem Wort stehen können: Geeignete Kommentarzeichen verhindern,
+daß das Zeilenende als Leerzeichen interpretiert wird. Das wäre näm
+\setcounter{beispiel}{34}lich
+sonst recht ärgerlich\footnote[\value{beispiel}]{Wie hier im Wort \textit{nämlich}!}.
+
+
+\end{document}

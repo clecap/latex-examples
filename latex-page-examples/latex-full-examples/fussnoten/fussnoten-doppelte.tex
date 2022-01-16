@@ -1,0 +1,35 @@
+\documentclass[a5paper]{article}
+\usepackage[pass]{geometry}
+
+\usepackage[german]{babel}
+
+\usepackage{bigfoot}
+
+\DeclareNewFootnote{default}
+
+% Definiere neuen Zähler subzaehler.
+% Inkrementieren des alten Zählers footnote soll neuen Zähler zurücksetzen.
+\newcounter{subzaehler}[footnote]
+
+% Definiere Macro subfussnotenangabe als Wert der Hauptfussnote
+% (das the referenziert den Wert) gefolgt von dem subzaehler
+% der aber in alphanumerischer Form auszugeben ist.
+\def\subfussnotenangabe{\thefootnote \alph{subzaehler}}
+
+\def\footnoteZweiterArt{%                  Definiert Makro footnoteZweiterArt 
+  \refstepcounter{subzaehler}%             Inkrementiere den Zähler
+  \Footnotedefault{\subfussnotenangabe}%   Schreibe Standardfussnote
+}
+
+
+\begin{document}
+
+Hello.\footnote{Normale Fußnote} Das\footnote{Zweite normale Fußnote} ist ein
+Test\footnoteZweiterArt{Fußnote zweiter Art}
+und\footnoteZweiterArt{Noch eine Fußnote zweiter Art}.
+Jetzt setzen wir eine weitere normale Fußnote\footnote{Diese hier} und
+dabei wird dann\footnoteZweiterArt{Weitere Fußnote zweiter Art}
+der Zähler der neuen Art Fußnoten zurückgesetzt.
+
+
+\end{document}

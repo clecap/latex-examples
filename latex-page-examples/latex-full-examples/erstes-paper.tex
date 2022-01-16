@@ -1,0 +1,76 @@
+\documentclass{article}
+
+\author{Maria Musterfrau}
+\title{Mein erstes Papier}
+\date{34. Februar 3021}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Hier steht ein kurzes Abstract. \LaTeX\ setzt es automatisch etwas kleiner, mit kleinen Einrückungen links und
+rechts. Zu Beginn des Paragraphen sehen wir einen Einzug des Textes; der Paragraph ist auf der Seite zentriert.
+
+Ein weiterer Paragraph wird durch eine Leerzeile begonnen, auch dieser Paragraph ist eingerückt. Es
+gibt auch eine zweite Möglichkeit, einen neuen Paragraph zu beginnen. \par Bei dieser Technik
+ist keine Leerzeile notwendig.
+Eine Leerzeile ist aber ganz hilfreich, weil sie den Quelltext strukturiert und sie dem Autor damit
+die Strukturierung seines Dokuments erleichtert. Deshalb verwende ich üblicherweise die Leerzeile.
+
+\end{abstract}
+
+\section{Einleitung}
+
+Der volle Text der Einleitung beginnt auf der linken Seite und ohne Einzug. Alle weiteren
+Paragraphen nach dem ersten beginnen aber mit einem Paragrapheneinzug -- schließlich ist der
+erste Paragraph auch ganz deutlich zu erkennen.
+
+Der Übergang zum zweiten Paragraphen ist also, wie hier, wieder durch einen
+Einzug charakterisiert. Da ein Paragraph typischerweise länger ist als eine Zeile, macht das auch Sinn.
+Bei extrem kurzen Paragraphen kann das dann aber auch mal komisch aussehen.
+
+Wie hier (das ist ein Paragraph).
+
+Wieder ein neuer Paragraph!
+
+Jetzt noch ein Paragraph.
+
+\hspace{-\parindent} Man kann diesen Einzug ganz leicht unterdrücken. Dazu fügt man einfach
+einen negativen horizontalen Abstand in der Größe eines Paragrapheneinzugs ein, wie ich es hier gerade
+gemacht habe, indem ich \textbackslash hspace\{-\textbackslash parindent\} eingefügt habe.
+Es wird noch besser lesbar, wenn ich diesen Teil in einer anderen Font schreibe und ihn
+dadurch als Code kennzeichne, also so: \texttt{\textbackslash hspace\{-\textbackslash parindent\}}.
+
+Natürlich sind Sie jetzt neugierig geworden, wie ich das geschrieben habe, denn: Genau den Steuerbefehl,
+der diesen Einzug unterdrückt hat, den kann ich ja nicht verwenden (Warum eigentlich?).
+Sehen Sie sich das daher im Quelltext an!
+
+
+
+\section{Hauptteil}
+
+\parskip 0.25cm 
+\parindent 0cm
+
+Es ist auch möglich, den Paragrapheneinzug dauerhaft zu unterdrücken, Dazu ist es erforderlich,
+den Paragrapheneinzug auf 0 zu setzen. Das hat dann aber den Nachteil, daß die einzelnen Paragraphen nicht
+mehr voneinander getrennt sind. Dieses Problem läßt sich einfach lösen, indem man nun einen
+vertikalen Abstand, ein sogenanntes skip einfügt.
+
+Wie Sie gerade sehen, habe ich das zu Beginn dieses Abschnitts so gemacht. Persönlich gefällt mir
+diese Einstellung auch am besten. Damit ich diese nicht immer selber setzen muß, habe ich einen 
+sogenannten Style-File erstellt, in dem ich diese und viele weitere Voreinstellungen für meine Dokumente
+in einer einzigen Zeile aktivieren kann.
+
+\section{Schluß}
+
+Wir kommen nun zum Schluß! Wir sind auf der zweiten Seite und sehen, daß auch die Seitennummerierung eine
+automatische Voreinstellung von \LaTeX\ ist.
+
+Wir können also bereits ein vollständiges \LaTeX-Dokument schreiben und erkennen, daß das System eine
+Vielzahl von Formatierungsschritten automatisch für uns übernimmt. Ich empfehle Ihnen das aufmerksame
+Studium des Quelltextes dieses Dokuments.
+
+
+\end{document}

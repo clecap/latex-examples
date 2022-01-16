@@ -1,0 +1,35 @@
+\documentclass[a5paper]{article}
+\usepackage[pass]{geometry}
+
+\usepackage[german]{babel}
+\usepackage{blindtext}
+
+\begin{document}
+
+
+Hier\footnote{Fußnote} wird eine Fußnote\footnotemark[1] mehrfach\footnotemark[1]
+benutzt. Der Zähler\footnote{der sonst automatisch hochzählt} wird in diesem
+Fall nicht weiter inkrementiert.
+
+\setcounter{footnote}{33}
+
+Der Zähler kann aber auch\footnote{wie hier} manuell hochgesetzt 
+\setcounter{footnote}{26}
+werden.
+
+Der Zähler kann aber auch\footnote{wie hier} manuell hochgesetzt 
+\setcounter{footnote}{22}%
+werden.
+
+\medskip
+
+Den Befehl zur Veränderung kann man direkt in den Text schreiben.
+Dabei muß aber beachtet werden, daß nicht aus Versehen ein Leerzeichen
+zuviel eingebaut wird. Unerwünschte Leerzeichen, die durch den
+Wechsel auf eine neue Zeile entstehen, können durch ein Kommentarzeichen
+elegant ausgeblendet werden. Beachte dazu die letzten zwei Sätze
+des vorangegangenen Absatzes.
+
+
+
+\end{document}

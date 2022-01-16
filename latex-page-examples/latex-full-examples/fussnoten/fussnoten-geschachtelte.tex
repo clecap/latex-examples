@@ -1,0 +1,23 @@
+\documentclass[a5paper]{article}
+\usepackage[pass]{geometry}
+
+\usepackage[german]{babel}
+
+\usepackage{bigfoot}
+
+\DeclareNewFootnote{default}
+\DeclareNewFootnote{A}[alph]
+
+\begin{document}
+
+Eine weitere Möglichkeit des Pakets bigfoot\footnote{Gerne auch bei kritischen Ausgaben in
+den Geisteswissenschaften genutzt.} sind verschachtelte Fußnoten%
+\footnote{Das sind Fußnoten wie dieser hier, die dann selber wieder eine 
+Fußnote\footnoteA{Diese hier} haben können}.
+
+In den Naturwissenschaften gibt es anders als in den Geis\-teswissenschaften\footnoteA{und übrigens auch in
+der Juristerei} jedoch nur selten Fußnoten.
+
+Der letzte Absatz zeigt, daß Fußnotenebenen auch gemischt werden können.
+
+\end{document}
