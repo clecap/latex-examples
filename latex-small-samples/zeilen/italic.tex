@@ -1,0 +1,165 @@
+\documentclass{article}
+
+
+\usepackage[outputdir=build,newfloat=true,cache]{minted} 
+
+\begin{document}
+
+\Huge
+
+
+
+\begin{tabular}[]{p{5cm}l}
+\begin{minipage}{1cm}
+\begin{minted}{tex}
+{\it f}H
+\end{minted}  
+\end{minipage}
+& 
+\begin{minipage}{1cm}
+{\it f}H
+\end{minipage}
+\end{tabular}
+
+\begin{tabular}[]{p{5cm}l}
+\begin{minipage}{1cm}
+\begin{minted}{tex}
+{\it f}\/H
+\end{minted}  
+\end{minipage}
+& 
+\begin{minipage}{1cm}
+{\it f}\/H
+\end{minipage}
+\end{tabular}
+
+
+
+\begin{tabular}[]{p{5cm}l}
+\begin{minipage}{1cm}
+\begin{minted}{tex}
+{\sl f}H
+\end{minted}  
+\end{minipage}
+& 
+\begin{minipage}{1cm}
+{\sl f}H
+\end{minipage}
+\end{tabular}
+
+\begin{tabular}[]{p{5cm}l}
+\begin{minipage}{1cm}
+\begin{minted}{tex}
+{\sl f}\/H
+\end{minted}  
+\end{minipage}
+& 
+\begin{minipage}{1cm}
+{\sl f}\/H
+\end{minipage}
+\end{tabular}
+
+
+\begin{tabular}[]{p{5cm}l}
+\begin{minipage}{1cm}
+\begin{minted}{tex}
+{\slshape f}\/H
+\end{minted}  
+\end{minipage}
+& 
+\begin{minipage}{1cm}
+{\slshape f}\/H
+\end{minipage}
+\end{tabular}
+
+\begin{tabular}[]{p{5cm}l}
+\begin{minipage}{1cm}
+\begin{minted}{tex}
+{\slshape f}\/H
+\end{minted}  
+\end{minipage}
+& 
+\begin{minipage}{1cm}
+{\slshape f}\/H
+\end{minipage}
+\end{tabular}
+
+\begin{tabular}[]{p{5cm}l}
+\begin{minipage}{1cm}
+\begin{minted}{tex}
+pdf\/\TeX
+\end{minted}  
+\end{minipage}
+& 
+\begin{minipage}{1cm}
+pdf\/\TeX
+\end{minipage}
+\end{tabular}
+
+
+\begin{tabular}[]{p{5cm}l}
+\begin{minipage}{1cm}
+\begin{minted}{tex}
+pdf\TeX
+\end{minted}  
+\end{minipage}
+& 
+\begin{minipage}{1cm}
+pdf\TeX
+\end{minipage}
+\end{tabular}
+
+
+
+
+
+{\it f}H
+
+
+emph, textit und textsl machen selber italic correction
+
+em itshape slshape  it  machen es nicht !
+
+
+
+\textit{schief}gestellt
+
+\textit{schief}\/gestellt
+
+{\it schief}gestellt
+
+
+
+{\itshape schief}gestellt
+
+
+{\itshape schief}\/gestellt
+
+\textsl{slanted}gestellt
+
+{\slshape slanted}gestellt
+
+{\slshape slanted}\/gestellt
+
+
+{\emph scheif}gestellt
+
+
+
+
+
+
+
+\textsl{}
+
+
+
+
+
+Nach einem \textit{italic} Wort
+
+Nach einem \textit{italic}\/ Wort
+
+Nach einem {\em italic} Wort
+
+\end{document}
