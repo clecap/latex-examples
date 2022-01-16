@@ -1,0 +1,188 @@
+\documentclass[a4paper]{article}
+
+\usepackage{../chc-exa-style}
+
+\begin{document}
+
+
+\begin{example}
+\tiny{tiny}
+\end{example}
+
+
+\begin{example}
+\scriptsize{scriptsize}
+\end{example}
+
+
+\begin{example}
+\footnotesize{footnotesize}
+\end{example}
+
+
+\begin{example}
+\small{small}
+\end{example}
+
+
+\begin{example}
+\normalsize{normalsize}
+\end{example}
+
+\begin{example}
+normalsize
+\end{example}
+
+\begin{example}
+\large{large}
+\end{example}
+
+
+\begin{example}
+\Large{Large}
+\end{example}
+
+
+\begin{example}
+\LARGE{LARGE}
+\end{example}
+
+
+\begin{example}
+\huge{huge}
+\end{example}
+
+
+\begin{example}
+\Huge{Huge}
+\end{example}
+
+\note{Wie die folgenden zwei Vergleiche identischer Texte zeigen, 
+beeinflussen die Befehle die Größe nicht linear, sondern verändern auch
+die Form der Buchstaben. Die einzelnen Fonts verschiedener Größe sind separat entworfen 
+und gehen nicht nur
+durch einfache geometrische Skalierung auseinander hervor.}
+
+\begin{example}
+\tiny{Huge}
+\end{example}
+
+\begin{example}
+\Huge{Huge}
+\end{example}
+
+\note{Größenangaben wirken ab der Angabe:}
+
+\begin{example}
+Normal \tiny tiny und \Large Large
+\end{example}
+
+\note{Größenangaben können auf Scopes beschränkt werden:}
+
+\begin{example}
+Normal {\tiny tiny} und {\Large Large}
+\end{example}
+
+
+\note{Größenangaben wirken im mathematischen Modus nicht:}
+
+\begin{example}
+$ {\tiny t} = {\large u} $
+\end{example}
+
+\note{Im mathematischen Modus können sie durch \texttt{\textbackslash mbox} eingeschmuggelt werden:}
+
+\begin{example}
+$ A_{\mbox{normal}} 
+= B_{\mbox{\scriptsize klein}} $
+\end{example}
+
+\note{Will man in der mbox in der Font-Variante \textit{italics verbleiben}, was sinnvoll
+erscheint, so nutzt man die einschlägigen Font-Kommandos für den Textmodus.
+}
+
+\begin{example}
+$ A_{\mbox{\scriptsize \textit{normal}}} 
+= B_{\mbox{\scriptsize \textit{klein}}} $
+\end{example}
+
+
+\note{Im Mathe-Modus aber wirken \texttt{\textbackslash scriptstyle} und \texttt{\textbackslash displaystyle}
+auf die Größe; beide Einstellungen haben aber eine weitergehende Bedeutung, die sich
+auch auf Abstände von Operatoren, die Basislinie der Formel und
+die Struktur des Satzes beziehen.}
+
+\begin{example}
+$ {\scriptstyle t} = \displaystyle u} $
+\end{example}
+
+
+\begin{example}
+$ \scriptstyle{t =} \displaystyle u $
+\end{example}
+
+\begin{example}
+$ \scriptstyle \lim_{n\to\infty} = 
+\displaystyle \lim_{n\to\infty} $
+\end{example}
+
+\pagebreak
+
+
+\note{Größenangaben existieren auch als Environments:}
+
+\begin{example}
+Wie \begin{tiny}hier\end{tiny} etwa
+\end{example}
+
+\note{Bei mehrzeiliger Schreibweise von Umgebungen können dabei aber unerwünschte
+Leerzeichen durch das Zeilenende auftreten:}
+\vspace*{0.3cm}
+
+\begin{example}
+Wie 
+\begin{tiny}
+hier
+\end{tiny}
+etwa
+\end{example}
+
+\note{Diese unerwünschten Leerzeichen kann man durch ein Kommentarzeichen am Ende
+unterdrücken, was aber umständlich ist. Daher werden Umgebungen zur Festlegung der Fontgröße 
+eigentlich nicht verwendet.}
+\vspace*{0.3cm}
+
+\begin{example}
+Wie 
+\begin{tiny}%
+hier
+\end{tiny}
+etwa
+\end{example}
+
+\vspace*{0.3cm}
+
+\begin{example}
+Wie 
+\begin{tiny}%
+hier
+\end{tiny}%
+etwa
+\end{example}
+
+\vspace*{0.3cm}
+
+\begin{example}
+Wie 
+\begin{tiny}
+hier
+\end{tiny}%
+etwa
+\end{example}
+
+
+
+
+
+
+\end{document}
